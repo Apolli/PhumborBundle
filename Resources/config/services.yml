@@ -13,12 +13,12 @@ services:
     phumbor.url.transformer:
         class: %phumbor.url.transformer.class%
         arguments:
-            - @phumbor.url.builder_factory
+            - '@phumbor.url.builder_factory'
             - %phumbor.transformations%
 
     phumbor.twig.extension:
         class: %phumbor.twig.extension.class%
         arguments:
-            - @phumbor.url.transformer
+            - '@phumbor.url.transformer'
         tags:
             - { name: twig.extension }
